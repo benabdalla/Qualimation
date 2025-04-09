@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Distribution / packaging
+build/
+dist/
+reports/
+recordings/
+resulats/
+traces/
+*.egg-info/
+.eggs/
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+
+# Flask/Python config files
+*.env
+
+# Logs and debug
+*.log
+*.pot
+*.mo
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Test output
+htmlcov/
+.coverage
+.tox/
+.nox/
+.pytest_cache/

@@ -1,0 +1,26 @@
+{
+    "admin": {
+        "password": "scrypt:32768:8:1$FHnlcBKOQq0mwyvK$e5638f94b65d7a1d2dd50de2d8ef6d6d0827b15f4275e00011a9a285c2a1fb7bb239deb63c9493b67a80330c2071f718cdf388700dccadcf88d6befb711fd904",
+        "job": "Developer"
+    },
+    "raefet": {
+        "password": "scrypt:32768:8:1$rSCrJMDLjjx8f20N$51d14817cabd2bf9f9dce784d5a5653ae9a3892a9603b09a844e96e6682f47531a3cd5870253b7a98f323dfa18a74812f96273314645d8de0345aeec02e0d0da",
+        "job": "Employee"
+    },
+    "mm": {
+        "password": "scrypt:32768:8:1$idLpLPjezJsGUgQG$017c563550edeae702e8438e0682d5aa5813855804519b0b81fd8160c2c994e3b5e4ce49899b0e68b8406d19caf728d67ede466f77e360779b65eb79eb7904d6",
+        "job": "Developer"
+    },
+    "mootez": {
+        "password": "scrypt:32768:8:1$HjuQnvOn1NFurxJy$6cfb07a6e2cb9c32409672a629c3ae2c7daf131127c5455d5c73964b0abdfe00aa3379097840292f4f094abef643c5c88850795867a5732d9ef5f98e8ea230d1",
+        "job": "Employee"
+    },
+    "nawel": {
+        "password": "scrypt:32768:8:1$oAJUSTYBfKzifNZ1$848a7daabb8224b6e1d532d326bfe96ee7204681cf6db5922e05db3750e29d6a42cb20df7d241b63872d8ba415a14fa16853a56556659f063524062ce9be61cd",
+        "job": "Developer"
+    },
+    "mo": {
+        "password": "scrypt:32768:8:1$kyGYz5cD5ZQQcptt$77b15304ffd39fb0071522478c640a5668294304f89834a881cf1236bf854fe88a09e226154968f82df6a22eb86739ec099c3c58dee95fccb4c0facac2efdaaa",
+        "job": "User"
+    }
+}

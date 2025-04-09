@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 Selenium Code Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div style="display: flex; justify-content: center; align-items: center; height: 20vh;">
+                <img src="static/sd.png" alt="Image"/>
+            </div>
+            <h3>Selenium Code Generator</h3>
+        </header>
+
+        <form id="generator-form" class="form-container">
+            <div class="input-group">
+                <label for="scenario">Gherkin Scenario</label>
+                <textarea id="scenario" name="scenario" placeholder="Enter your Gherkin scenario here..." rows="5"></textarea>
+            </div>
+            <div class="button-group">
+                <button type="button" id="generateDataBtn" onclick="generateFromData()">Generate from My Data</button>
+                <button type="button" id="generateGeminiBtn" onclick="generateFromGemini()">Generate Selenium (Gemini)</button>
+                <button type="button" onclick="window.location.href='{{ url_for('logout') }}'">🚪 Logout</button>
+            </div>
+        </form>
+
+        <div id="status" class="status-bar">Status: Idle</div>
+
+        <div id="results" class="results-container">
+            <div class="result-item">
+                <h2>Generated Code</h2>
+                <pre id="output">Waiting for code generation...</pre>
+            </div>
+            <div class="input-group">
+                <label for="correctedCode">Corrected Code</label>
+                <textarea id="correctedCode" name="correctedCode" placeholder="Enter corrected code here..." rows="5"></textarea>
+            </div>
+            <div class="button-group">
+                <button type="button" id="correctBtn" onclick="submitCorrection()">Submit Correction</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const generateDataBtn = document.getElementById('generateDataBtn');
+        const generateGeminiBtn = document.getElementById('generateGeminiBtn');
+        const correctBtn = document.getElementById('correctBtn');
+        const statusBar = document.getElementById('status');
+
+        async function generateFromData() {
+            console.log("Generate from My Data clicked");
+            const scenario = document.getElementById('scenario').value;
+            if (!scenario) {
+                alert("Please enter a Gherkin scenario!");
+                return;
+            }
+
+            statusBar.innerText = "Status: Running...";
+            statusBar.classList.remove('success', 'failure', 'error');
+            statusBar.classList.add('running');
+            generateDataBtn.disabled = true;
+
+            try {
+                console.log("Sending request to /generate_from_data", { scenario });
+                const response = await fetch('/generate_from_data', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ scenario })
+                });
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const data = await response.json();
+                console.log("Response:", data);
+                document.getElementById('output').textContent = data.generated_code || data.error || "No code generated";
+
+                statusBar.innerText = "Status: Successfully";
+                statusBar.classList.remove('running');
+                statusBar.classList.add('success');
+            } catch (error) {
+                console.error("Error:", error);
+                document.getElementById('output').textContent = `Error: ${error.message}`;
+                statusBar.innerText = "Status: Error";
+                statusBar.classList.remove('running');
+                statusBar.classList.add('error');
+            } finally {
+                generateDataBtn.disabled = false;
+            }
+        }
+
+        async function generateFromGemini() {
+            console.log("Generate Selenium (Gemini) clicked");
+            const scenario = document.getElementById('scenario').value;
+            if (!scenario) {
+                alert("Please enter a Gherkin scenario!");
+                return;
+            }
+
+            statusBar.innerText = "Status: Running...";
+            statusBar.classList.remove('success', 'failure', 'error');
+            statusBar.classList.add('running');
+            generateGeminiBtn.disabled = true;
+
+            try {
+                console.log("Sending request to /generate_from_gemini", { scenario });
+                const response = await fetch('/generate_from_gemini', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ scenario })
+                });
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const data = await response.json();
+                console.log("Response:", data);
+                document.getElementById('output').textContent = data.generated_code || data.error || "No code generated";
+
+                statusBar.innerText = "Status: Successfully";
+                statusBar.classList.remove('running');
+                statusBar.classList.add('success');
+            } catch (error) {
+                console.error("Error:", error);
+                document.getElementById('output').textContent = `Error: ${error.message}`;
+                statusBar.innerText = "Status: Error";
+                statusBar.classList.remove('running');
+                statusBar.classList.add('error');
+            } finally {
+                generateGeminiBtn.disabled = false;
+            }
+        }
+
+        async function submitCorrection() {
+            console.log("Submit Correction clicked");
+            const scenario = document.getElementById('scenario').value;
+            const correctedCode = document.getElementById('correctedCode').value;
+            if (!scenario || !correctedCode) {
+                alert("Please enter both scenario and corrected code!");
+                return;
+            }
+
+            statusBar.innerText = "Status: Submitting...";
+            statusBar.classList.remove('success', 'failure', 'error');
+            statusBar.classList.add('running');
+            correctBtn.disabled = true;
+
+            try {
+                console.log("Sending request to /correct", { scenario, correctedCode });
+                const response = await fetch('/correct', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ scenario, corrected_code: correctedCode })
+                });
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const data = await response.json();
+                console.log("Response:", data);
+                alert(data.message || data.error || "Correction submitted");
+                document.getElementById('correctedCode').value = '';
+
+                statusBar.innerText = "Status: Successfully";
+                statusBar.classList.remove('running');
+                statusBar.classList.add('success');
+            } catch (error) {
+                console.error("Error:", error);
+                alert(`Error: ${error.message}`);
+                statusBar.innerText = "Status: Error";
+                statusBar.classList.remove('running');
+                statusBar.classList.add('error');
+            } finally {
+                correctBtn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>

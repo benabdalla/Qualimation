@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}QualiMation - {{ user.id }}{% endblock %}
+{% block content %}
+<div class="container py-5" style="background: rgba(255, 255, 255, 0.7); border-radius: 20px;">
+    <div class="row">
+        <div class="col-12 text-center mb-4">
+            <img src="{{ url_for('static', filename='images/sd.png') }}" alt="Logo" class="img-fluid" style="max-width: 200px;">
+            <h1 class="display-4">QualiMation Bot</h1>
+            <a href="{{ url_for('logout') }}" class="btn btn-primary">Logout</a>
+        </div>
+    </div>
+    <form method="POST" enctype="multipart/form-data" id="taskForm">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="mb-3">
+                    <input type="text" name="test_key" class="form-control" placeholder="Test Key (e.g., PROJ-200)" value="{{ form_data.test_key | default('') }}">
+                </div>
+                <div class="mb-3">
+                    <textarea name="task" id="taskInput" class="form-control" rows="5" placeholder="Enter your task (e.g., Navigate to Google) or upload a file" required>{{ form_data.task | default(prefilled_task, '') }}</textarea>
+                </div>
+                <div class="mb-3 position-relative">
+                    <input type="file" name="task_file" class="form-control" id="fileInput" accept=".txt,.json" style="opacity: 0; position: absolute; width: 100%; height: 100%; cursor: pointer;">
+                    <label for="fileInput" class="form-control d-flex align-items-center justify-content-center" style="pointer-events: none;">
+                        <span>📤 Upload Task File</span>
+                    </label>
+                </div>
+                <div class="mb-3">
+                    <input type="url" name="url" class="form-control" placeholder="Starting URL (e.g., https://www.google.com)" value="{{ form_data.url | default('') }}">
+                </div>
+                <div class="mb-3">
+                    <textarea name="add_infos" class="form-control" rows="3" placeholder="Additional instructions (optional)">{{ form_data.add_infos | default('') }}</textarea>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <input type="number" name="max_steps" class="form-control" value="{{ form_data.max_steps | default('100') }}" placeholder="Max Steps">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" name="headless" class="form-check-input" id="headless" {% if form_data.headless | default(True) %}checked{% endif %}>
+                    <label class="form-check-label" for="headless">Headless Mode</label>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" name="use_vision" class="form-check-input" id="use_vision" {% if form_data.use_vision | default(True) %}checked{% endif %}>
+                    <label class="form-check-label" for="use_vision">Use Vision</label>
+                </div>
+                <button type="submit" name="start" class="btn btn-success w-100 mb-3" id="startButton" {% if task_running %}disabled{% endif %}>Start Task</button>
+                {% if prefilled_task %}
+                    <button type="submit" name="execute_module_task" class="btn btn-primary w-100 mb-3" {% if task_running %}disabled{% endif %}>Execute Module Task</button>
+                {% endif %}
+                <button type="submit" name="stop" class="btn btn-danger w-100 mb-3" id="stopButton" {% if not task_running %}disabled{% endif %}>Stop Task</button>
+                <a href="{{ url_for('modules') }}" class="btn btn-primary w-100 mb-3">Modules</a>
+                <a href="{{ url_for('results') }}" class="btn btn-primary w-100">Show Results</a>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const taskInput = document.getElementById('taskInput');
+        const fileInput = document.getElementById('fileInput');
+
+        // Ensure prefilled task or form data is set on load
+        taskInput.value = "{{ form_data.task | default(prefilled_task, '') | escape }}";
+
+        // Update task field when a file is selected
+        fileInput.addEventListener('change', function() {
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    let content = e.target.result;
+                    if (file.name.endsWith('.json')) {
+                        try {
+                            const data = JSON.parse(content);
+                            content = data.task || content;
+                        } catch (err) {
+                            console.error('Error parsing JSON:', err);
+                        }
+                    }
+                    taskInput.value = content.trim();
+                };
+                reader.readAsText(file);
+            }
+        });
+    });
+</script>
+{% endblock %}
