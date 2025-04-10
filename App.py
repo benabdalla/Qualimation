@@ -5,6 +5,7 @@ import logging
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from flask import Flask, render_template, request, redirect, url_for, flash, send_file, jsonify, session
+from sympy import false
 from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
 from config_app.agent.service import Agent
@@ -65,6 +66,7 @@ def save_users(users):
 # Routes
 @app.route('/')
 def welcome():
+    login()
     return render_template('welcome.html')
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -77,7 +79,7 @@ def login():
             session['user'] = {'id': username, 'job': users[username]['job']}
             return redirect(url_for('main'))
         flash('Invalid username or password!', 'error')
-    return render_template('login.html')
+    return render_template('welcome.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -115,6 +117,9 @@ def main():
                 running_tasks[task_id] = "cancelled"
                 flash('Task cancellation requested.', 'info')
             return redirect(url_for('main'))
+        if "login" in request.form:
+            login()
+
 
         task = request.form.get('task', session.get('prefilled_task', ''))
         url = request.form.get('url', '')
@@ -188,7 +193,7 @@ def main():
 
     form_data = session.get('form_data', {})
     prefilled_task = session.get('prefilled_task', '')
-    return render_template('main.html', user=session['user'], task_running=task_running, form_data=form_data, prefilled_task=prefilled_task)
+    return render_template('qualimationChoise.html', user=session['user'], task_running=task_running, form_data=form_data, prefilled_task=prefilled_task)
 
 @app.route('/results', methods=['GET', 'POST'])
 def results():
@@ -375,4 +380,4 @@ async def execute_task(task, url, add_infos, max_steps, headless, use_vision, te
             await browser.close()
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=false, host='0.0.0.0', port=5000)

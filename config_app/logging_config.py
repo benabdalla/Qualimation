@@ -109,7 +109,7 @@ def setup_logging():
 	browser_use_logger.setLevel(root.level)  # Set same level as root logger
 
 	logger = logging.getLogger('config_app')
-	logger.info('Qualimation start', log_type)
+	logger.info('Qualimation start %s', log_type)
 	# Silence third-party loggers
 	for logger in [
 		'WDM',
