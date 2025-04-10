@@ -45,9 +45,6 @@
 }
 
 .login-sec .copy-text {
-    position: absolute;
-    width: 80%;
-    bottom: 20px;
     font-size: 13px;
     text-align: center;
 }
@@ -64,12 +61,12 @@
     margin-bottom: 30px;
     font-weight: 800;
     font-size: 30px;
-    color: #DE6262;
+    color: #4869e5;
 }
 
 .login-sec h2:after {
     content: " ";
-    width: 100px;
+    width: 200px;
     height: 5px;
     background: #FEB58A;
     display: block;
@@ -77,6 +74,8 @@
     border-radius: 3px;
     margin-left: auto;
     margin-right: auto
+    position : relative;
+    bottom: 50px;
 }
 
 .btn-login {
@@ -188,4 +187,8 @@
   .carousel-caption {
     position: relative;
     z-index: 2;
+  }
+.login-forms {
+ position:relative;
+ bottom :180px;
   }

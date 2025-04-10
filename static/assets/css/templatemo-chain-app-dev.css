@@ -131,8 +131,9 @@ p {
 }
 
 img {
-  width: 100%;
-  overflow: hidden;
+    width: 60%;
+    height: 30px;
+    overflow: hidden;
 }
 
 /* 
@@ -962,7 +963,8 @@ Banner Style
 }
 
 .main-banner .right-image img {
-  max-width: 710px;
+    width: 100%;
+    height: 100%;
 }
 
 .main-banner .left-content .white-button a button {

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-center align-items-center vh-100" style="background: url('{{ url_for('static', filename='images/back.png') }}') no-repeat center center fixed; background-size: cover;">
+    <div class="text-center">
+        <img src="{{ url_for('static', filename='images/sd.png') }}" alt="Logo" class="img-fluid mb-3" style="max-width: 400px;">
+        <h1 class="display-4 text-white">Welcome to QualiMation</h1>
+        <a href="{{ url_for('login') }}" class="btn btn-primary mt-3">Get Started</a>
+    </div>
+</div>
+{% endblock %}
