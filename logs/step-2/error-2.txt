@@ -1,0 +1,10 @@
+TimeoutError: Locator.click: Timeout 500ms exceeded.
+Call log:
+waiting for get_by_test_id("69")
+  -   locator resolved to <a bid="69" id="Valider" title="CONNEXION" browserg…>CONNEXION</a>
+  - attempting click action
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   performing click action
