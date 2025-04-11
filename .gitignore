@@ -47,3 +47,4 @@ htmlcov/
 .nox/
 .pytest_cache/
 playwright/node_modules
+logs/

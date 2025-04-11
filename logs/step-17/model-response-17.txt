@@ -1,0 +1,7 @@
+{
+    "action_name": "InputText",
+    "action_params": {
+        "bid": "70",
+        "value": "Mo"
+    }
+}

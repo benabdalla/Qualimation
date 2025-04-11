@@ -1,0 +1,144 @@
+<head bid="1">
+ <title bid="3">
+  Page sans titre
+ </title>
+</head>
+<form action="./" bid="17" id="form1" method="post">
+ <div bid="18" class="aspNetHidden">
+  <input bid="19" id="__LASTFOCUS" name="__LASTFOCUS" type="hidden" value=""/>
+  <input bid="20" id="__EVENTTARGET" name="__EVENTTARGET" type="hidden" value=""/>
+  <input bid="21" id="__EVENTARGUMENT" name="__EVENTARGUMENT" type="hidden" value=""/>
+  <input bid="22" id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="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"/>
+ </div>
+ <div bid="26" class="aspNetHidden">
+  <input bid="27" id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="8065E615"/>
+ </div>
+ <div bid="28" class="modal modalSession" id="ModalSession">
+  <div bid="29" class="modal-content Clegend SessMod">
+   <div bid="30" class="modal-body" id="Div5">
+    <div bid="31" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-center">
+     <span bid="32" class="fa fa-exclamation-triangle fa-5x" style="color: #afa20b;">
+     </span>
+    </div>
+    <div bid="33" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+     <span bid="34" class="Clbl_popup" id="Label106">
+     </span>
+    </div>
+    <div bid="35" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 espacement pull-center">
+     <input bid="36" class="btn btn-danger" id="But_OK" name="But_OK" onclick="closemyModalSession();" type="submit" value="OK"/>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div bid="37" class="col">
+  <div bid="38" class="row">
+   <div bid="39" class="col">
+   </div>
+   <div bid="40" class="col" style="margin-top: 70px">
+    <img bid="41" id="longin_logo" src="images/LogoQualipro_login.png"/>
+    <span bid="42" class="span_font_danger pull-right prod-default" id="Label_vide">
+    </span>
+   </div>
+   <div bid="43" class="col">
+   </div>
+  </div>
+  <div bid="44" class="col">
+  </div>
+  <div bid="45" class="col">
+  </div>
+ </div>
+ <div bid="46" class="row">
+  <div bid="47" class="col">
+  </div>
+  <div bid="48" class="col">
+  </div>
+  <div bid="49" class="col">
+  </div>
+ </div>
+ <div bid="50" class="row justify-content-center row_authentif">
+  <div bid="51" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+   <div bid="52" class="card card-outline-primary">
+    <div bid="53" class="card-block">
+     <div bid="54" class="row">
+      <div bid="55" class="col">
+      </div>
+      <div bid="56" class="col-6">
+       <div bid="57" class="row form-group" style="margin-bottom: 28px !important; margin-top: 10px;">
+        <div bid="58" class="input-group">
+         <span bid="59" class="input-group-addon input-group-addon1">
+          <i bid="60" class="fa fa-user">
+           &lt;::before&gt;
+          </i>
+         </span>
+         <input bid="61" class="form-control TextBox_log" id="Text_Login" name="Text_Login" placeholder="Login" required="" type="text" value="MO"/>
+        </div>
+       </div>
+       <div bid="62" class="row form-group">
+        <div bid="63" class="input-group">
+         <span bid="64" class="input-group-addon input-group-addon1">
+          <i bid="65" class="fa fa-unlock-alt">
+           &lt;::before&gt;
+          </i>
+         </span>
+         <input bid="66" class="form-control TextBox_log" id="Text_Motpass" name="Text_Motpass" placeholder="Mot de passe" required="" type="password" value="Mo"/>
+        </div>
+       </div>
+       <span bid="67" class="champ_text" id="Lab2" style="display:inline-block;width:120px;">
+        Mot de passe non valide
+       </span>
+       <div bid="68" class="row row_1">
+        <label bid="69" id="lblMessage">
+        </label>
+        <a bid="70" class="btn btn-lg btn-outline-success" href="javascript:__doPostBack('Valider','')" id="Valider" style="display:inline-block;width:300%;text-transform: capitalize;" title="CONNEXION">
+         CONNEXION
+        </a>
+       </div>
+       <div bid="71" class="row row_1">
+        <div bid="72" class="col-12 row_15">
+         <a bid="73" href="javascript:__doPostBack('LinkButton1','')" id="LinkButton1" title="Changer mes paramètres d'accès">
+          Changer mes paramètres d'accès
+         </a>
+        </div>
+       </div>
+       <div bid="74" class="row row_1">
+        <div bid="75" class="col-12 row_15">
+        </div>
+       </div>
+       <div bid="76" class="col">
+       </div>
+       <div bid="77" class="col">
+        <div bid="78" class="col-12 row_15">
+        </div>
+       </div>
+       <div bid="79" class="col">
+       </div>
+      </div>
+      <div bid="80" class="col">
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div bid="81" class="row" id="footer">
+  <div bid="82" class="col">
+  </div>
+  <div bid="83" class="col">
+   <span bid="84" id="text_copy_rignt">
+    © 2004-2025 QUALIPRO BY IMAGINE HUMAIN TOUS DROITS RÉSERVÉS
+   </span>
+  </div>
+  <div bid="85" class="col">
+  </div>
+ </div>
+ <input bid="86" id="hf_filiale" name="hf_filiale" type="hidden" value=""/>
+ <input bid="87" id="hf_util_non_valide" name="hf_util_non_valide" type="hidden" value="Utilisateur non valide,verifier le login et le mot de passe s'il vous plait."/>
+ <input bid="88" id="hf_util_bloque" name="hf_util_bloque" type="hidden" value="Utilisateur bloqué, veuillez consulter votre administrateur."/>
+ <input bid="89" id="hf_utilis_max_atteint" name="hf_utilis_max_atteint" type="hidden" value="Désolé, le nombre des utilisateurs est supérieur au nombre de licences.Contactez l'administrateur de votre système."/>
+ <input bid="90" id="hf_util_sans_session" name="hf_util_sans_session" type="hidden" value="Cet utilisateur n'a pas une session sur Qualipro.Contactez l'administrateur de votre système."/>
+ <input bid="91" id="hf_utilisateur_azure" name="hf_utilisateur_azure" type="hidden" value="Utilisateur Azure non trouvé dans Qualipro. Contacter l'administrateur de votre système."/>
+ <input bid="92" id="Hd_expiration" name="Hd_expiration" type="hidden" value="Session expirée ! Vous avez atteint la date limite de paiement ! Veuillez contacter Saphir Consult"/>
+ <input bid="93" id="Hd_adresseMac" name="Hd_adresseMac" type="hidden" value="Cette installation n’est pas autorisée."/>
+ <input bid="94" id="Hd_config" name="Hd_config" type="hidden" value="Erreur de configuration. Veuillez contacter Saphir Consult"/>
+ <input bid="95" id="hlan" name="hlan" type="hidden" value=""/>
+</form>

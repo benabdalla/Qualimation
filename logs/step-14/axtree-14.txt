@@ -1,0 +1,14 @@
+RootWebArea 'Page sans titre', focused
+	[17] Section '', visible
+		[41] image '', visible
+		StaticText '\uf007'
+		[61] textbox 'Login' value='MO', visible, required
+			StaticText 'MO'
+		StaticText '\uf13e'
+		[66] textbox 'Mot de passe' value='••', visible, focused, required
+			StaticText '••'
+		StaticText 'Mot de passe non valide'
+		[69] LabelText '', visible
+		[70] link 'CONNEXION', visible
+		[73] link "Changer mes paramètres d'accès", visible
+		StaticText '© 2004-2025 QUALIPRO BY IMAGINE HUMAIN TOUS DROITS RÉSERVÉS'

@@ -1,0 +1,4 @@
+{
+    "bid": "70",
+    "action": "ClickAction"
+}
