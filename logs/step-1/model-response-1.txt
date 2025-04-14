@@ -2,6 +2,6 @@
     "action_name": "InputText",
     "action_params": {
         "bid": "66",
-        "value": "Mo"
+        "value": "Password0!"
     }
 }

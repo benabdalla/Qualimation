@@ -1,6 +1,6 @@
 {
     "action_name": "ClickAction",
     "action_params": {
-        "bid": "77"
+        "bid": "1548"
     }
 }

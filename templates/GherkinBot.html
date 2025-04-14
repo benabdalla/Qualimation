@@ -72,12 +72,6 @@
                     <form method="POST" enctype="multipart/form-data" id="taskForm">
                         <div class="row">
                             <div class="col-md-8">
-                                <div class="mb-3">
-                                    <input type="text" name="test_key" class="form-control" placeholder="Test Key (e.g., PROJ-200)" value="{{ form_data.test_key | default('') }}">
-                                </div>
-                                <div class="mb-3">
-                                    <textarea name="task" id="taskInput" class="form-control" rows="5" placeholder="Enter your task (e.g., Navigate to Google) or upload a file" required>{{ form_data.task | default(prefilled_task, '') }}</textarea>
-                                </div>
                                 <div class="mb-3 position-relative">
                                     <input type="file" name="task_file" class="form-control" id="fileInput" accept=".txt,.json" style="opacity: 0; position: absolute; width: 100%; height: 100%; cursor: pointer;">
                                     <label for="fileInput" class="form-control d-flex align-items-center justify-content-center" style="pointer-events: none;">

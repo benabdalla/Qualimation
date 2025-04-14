@@ -1,7 +1,7 @@
 {
     "action_name": "InputText",
     "action_params": {
-        "bid": "65",
-        "value": "MO"
+        "bid": "2048",
+        "value": "Origine action"
     }
 }

@@ -5,7 +5,7 @@ import logging
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from flask import Flask, render_template, request, redirect, url_for, flash, send_file, jsonify, session
-from sympy import false
+from sympy import false, true
 from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
 from config_app.agent.service import Agent
@@ -69,6 +69,57 @@ def welcome():
     login()
     return render_template('welcome.html')
 
+# @app.route('/manule')
+# def manule():
+#     return render_template('botManual.html')
+
+@app.route('/manule', methods=['GET', 'POST'])
+def manule():
+    # Tu peux adapter ce form_data selon tes besoins
+    form_data = {
+        "test_key": "",
+        "task": "",
+        "url": "",
+        "add_infos": "",
+        "max_steps": 100,
+        "headless": True,
+        "use_vision": True
+    }
+    prefilled_task = "Navigate to Google"  # ou vide
+    task_running = False  # à définir selon ton contexte
+
+    return (render_template(
+        'main.html',
+        form_data=form_data,
+        prefilled_task=prefilled_task,
+        task_running=task_running,
+        user={"id": "mootez"}  # ou le vrai user s’il y en a un
+    ))
+
+
+@app.route('/gherkin', methods=['GET', 'POST'])
+def gherkin():
+    # Tu peux adapter ce form_data selon tes besoins
+    form_data = {
+        "test_key": "",
+        "task": "",
+        "url": "",
+        "add_infos": "",
+        "max_steps": 100,
+        "headless": True,
+        "use_vision": True
+    }
+    prefilled_task = "Navigate to Google"  # ou vide
+    task_running = False  # à définir selon ton contexte
+
+    return render_template(
+        'GherkinBot.html',
+        form_data=form_data,
+        prefilled_task=prefilled_task,
+        task_running=task_running,
+        user={"id": "mootez"}  # ou le vrai user s’il y en a un
+    )
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -107,7 +158,6 @@ def logout():
 def main():
     if 'user' not in session:
         return redirect(url_for('login'))
-
     task_id = session.get('current_task_id', None)
     task_running = task_id and running_tasks.get(task_id) == "running"
 
@@ -380,4 +430,4 @@ async def execute_task(task, url, add_infos, max_steps, headless, use_vision, te
             await browser.close()
 
 if __name__ == '__main__':
-    app.run(debug=false, host='0.0.0.0', port=5000)
+    app.run(debug=true, host='0.0.0.0', port=5000)

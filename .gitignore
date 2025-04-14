@@ -46,5 +46,6 @@ htmlcov/
 .tox/
 .nox/
 .pytest_cache/
-playwright/node_modules
+/playwright/node_modules
 logs/
+

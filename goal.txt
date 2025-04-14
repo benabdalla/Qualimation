@@ -1,0 +1,6 @@
+Vérifier que les panels sous action et clôture sont affichés une fois la création de la fiche est validée.
+1. Accéder au module Actions
+2. Cliquer sur 'Ajouter Action détaillée'
+3. Saisir toutes les informations du formulaire
+4. Valider
+5. Vérifier que la fiche a été ajoutée et que les panels sont visibles

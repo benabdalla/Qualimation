@@ -138,6 +138,12 @@
   color: #007aff;
   border: 2px solid #007aff;
 }
+ /* start button */
+.btn.start {
+  background-color: white;
+  color: #007aff;
+  border: 2px solid #007aff;
+}
 
 /* Play Store button */
 .btn.playstore {
@@ -149,7 +155,15 @@
 .btn.apple:hover {
   background-color: #0077e6;
   color:white;
+
 }
+
+.btn.start:hover {
+  background-color: #28a745!important;
+  color:white;
+    border: 2px solid #28a745!important;
+}
+
 #carouselExampleIndicators {
   background: url("/static/assets/images/iaLogin.png");
        height: 69%;
@@ -191,3 +205,7 @@
   #modal.popupContainer {
     height: 70%;
   }
+  .cadeStyle{
+   width:25%;
+   height:70%
+    }

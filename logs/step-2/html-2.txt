@@ -80,7 +80,7 @@
            &lt;::before&gt;
           </i>
          </span>
-         <input bid="66" class="form-control TextBox_log" id="Text_Motpass" name="Text_Motpass" placeholder="Mot de passe" required="" type="password" value="Mo"/>
+         <input bid="66" class="form-control TextBox_log" id="Text_Motpass" name="Text_Motpass" placeholder="Mot de passe" required="" type="password" value="MO"/>
         </div>
        </div>
        <div bid="67" class="row row_1">
@@ -92,8 +92,8 @@
        </div>
        <div bid="70" class="row row_1">
         <div bid="71" class="col-12 row_15">
-         <a bid="72" href="javascript:__doPostBack('LinkButton1','')" id="LinkButton1" title="Changer mes paramètres d'accès">
-          Changer mes paramètres d'accès
+         <a bid="72" href="javascript:__doPostBack('LinkButton1','')" id="LinkButton1" title="Changer mes paramÃ¨tres d'accÃ¨s">
+          Changer mes paramÃ¨tres d'accÃ¨s
          </a>
         </div>
        </div>
@@ -122,7 +122,7 @@
   </div>
   <div bid="82" class="col">
    <span bid="83" id="text_copy_rignt">
-    © 2004-2025 QUALIPRO BY IMAGINE HUMAIN TOUS DROITS RÉSERVÉS
+    Â© 2004-2025 QUALIPRO BY IMAGINE HUMAIN TOUS DROITS RÃ‰SERVÃ‰S
    </span>
   </div>
   <div bid="84" class="col">
@@ -130,12 +130,12 @@
  </div>
  <input bid="85" id="hf_filiale" name="hf_filiale" type="hidden" value=""/>
  <input bid="86" id="hf_util_non_valide" name="hf_util_non_valide" type="hidden" value="Utilisateur non valide,verifier le login et le mot de passe s'il vous plait."/>
- <input bid="87" id="hf_util_bloque" name="hf_util_bloque" type="hidden" value="Utilisateur bloqué, veuillez consulter votre administrateur."/>
- <input bid="88" id="hf_utilis_max_atteint" name="hf_utilis_max_atteint" type="hidden" value="Désolé, le nombre des utilisateurs est supérieur au nombre de licences.Contactez l'administrateur de votre système."/>
- <input bid="89" id="hf_util_sans_session" name="hf_util_sans_session" type="hidden" value="Cet utilisateur n'a pas une session sur Qualipro.Contactez l'administrateur de votre système."/>
- <input bid="90" id="hf_utilisateur_azure" name="hf_utilisateur_azure" type="hidden" value="Utilisateur Azure non trouvé dans Qualipro. Contacter l'administrateur de votre système."/>
- <input bid="91" id="Hd_expiration" name="Hd_expiration" type="hidden" value="Session expirée ! Vous avez atteint la date limite de paiement ! Veuillez contacter Saphir Consult"/>
- <input bid="92" id="Hd_adresseMac" name="Hd_adresseMac" type="hidden" value="Cette installation n’est pas autorisée."/>
+ <input bid="87" id="hf_util_bloque" name="hf_util_bloque" type="hidden" value="Utilisateur bloquÃ©, veuillez consulter votre administrateur."/>
+ <input bid="88" id="hf_utilis_max_atteint" name="hf_utilis_max_atteint" type="hidden" value="DÃ©solÃ©, le nombre des utilisateurs est supÃ©rieur au nombre de licences.Contactez l'administrateur de votre systÃ¨me."/>
+ <input bid="89" id="hf_util_sans_session" name="hf_util_sans_session" type="hidden" value="Cet utilisateur n'a pas une session sur Qualipro.Contactez l'administrateur de votre systÃ¨me."/>
+ <input bid="90" id="hf_utilisateur_azure" name="hf_utilisateur_azure" type="hidden" value="Utilisateur Azure non trouvÃ© dans Qualipro. Contacter l'administrateur de votre systÃ¨me."/>
+ <input bid="91" id="Hd_expiration" name="Hd_expiration" type="hidden" value="Session expirÃ©e ! Vous avez atteint la date limite de paiement ! Veuillez contacter Saphir Consult"/>
+ <input bid="92" id="Hd_adresseMac" name="Hd_adresseMac" type="hidden" value="Cette installation nâ€™est pas autorisÃ©e."/>
  <input bid="93" id="Hd_config" name="Hd_config" type="hidden" value="Erreur de configuration. Veuillez contacter Saphir Consult"/>
  <input bid="94" id="hlan" name="hlan" type="hidden" value=""/>
 </form>

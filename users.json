@@ -22,5 +22,9 @@
     "mo": {
         "password": "scrypt:32768:8:1$kyGYz5cD5ZQQcptt$77b15304ffd39fb0071522478c640a5668294304f89834a881cf1236bf854fe88a09e226154968f82df6a22eb86739ec099c3c58dee95fccb4c0facac2efdaaa",
         "job": "User"
+    },
+    "rr": {
+        "password": "scrypt:32768:8:1$X6Eyv9FFrhUBoJ9e$08102fa75f3fe1164fc96371f8cb09b555045a93c62d42ab2484efe70dccced1a00fa4f5cf9af916e1a13a3ea80070ebc3bc006dde417f551d918208fd107176",
+        "job": "User"
     }
 }

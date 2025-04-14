@@ -1740,6 +1740,14 @@ PopUp
   transition: all .3s;
 }
 
+.btnTask {
+  padding: 10px 20px;
+  background:#fff;
+  color: #4b8ef;
+  transition: all .3s;
+}
+
+
 .btn_red {
   background: #4b8ef1;
   color: #FFF;
@@ -1747,6 +1755,11 @@ PopUp
 
 .btn:hover {
   background: #E4E4E2;
+}
+.btnTask:hover {
+   background:#4b8ef;
+   color: #fff;
+
 }
 
 .btn_red:hover {

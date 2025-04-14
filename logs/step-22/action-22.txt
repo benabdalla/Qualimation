@@ -1,5 +1,4 @@
 {
-    "bid": "66",
-    "value": "Mo",
-    "action": "InputText"
+    "bid": "946",
+    "action": "ClickAction"
 }

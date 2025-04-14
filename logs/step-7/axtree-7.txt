@@ -1,13 +1,174 @@
-RootWebArea 'Page sans titre', focused
-	[17] Section '', visible
-		[41] image '', visible
-		StaticText '\uf007'
-		[61] textbox 'Login' value='MO', visible, focused, required
-			StaticText 'MO'
-		StaticText '\uf13e'
-		[66] textbox 'Mot de passe', visible, required
-		StaticText 'Mot de passe non valide'
-		[69] LabelText '', visible
-		[70] link 'CONNEXION', visible
-		[73] link "Changer mes param�tres d'acc�s", visible
-		StaticText '� 2004-2025 QUALIPRO BY IMAGINE HUMAIN TOUS DROITS R�SERV�S'
+RootWebArea 'SESSION.::.Mootez Group.::.VERSION.:W25.4', focused
+	[31] Section '', visible
+		[152] link '', visible
+		[154] image '', visible
+		[156] navigation '', visible
+			[158] image '', visible
+			[159] list '', visible
+				[160] listitem '', visible
+					[161] LayoutTable '', visible
+						[162] link 'Documentation', visible
+							[163] image '', visible
+						[164] link '544', visible
+							StaticText '544'
+					[167] link 'Documentation', visible
+						StaticText 'Documentation'
+				[169] listitem '', visible
+					[170] LayoutTable '', visible
+						[171] link 'Action', visible
+							[172] image '', visible
+						[173] link '3391', visible
+							StaticText '3391'
+					[176] link 'Action', visible
+						StaticText 'Action'
+				[187] listitem '', visible
+					[188] LayoutTable '', visible
+						[189] link 'Audit', visible
+							[190] image '', visible
+						[191] link '1355', visible
+							StaticText '1355'
+					[194] link 'Audit', visible
+						StaticText 'Audit'
+				[205] listitem '', visible
+					[206] LayoutTable '', visible
+						[207] link 'Indicateur', visible
+							[208] image '', visible
+						[209] link '17', visible
+							StaticText '17'
+					[212] link 'Indicateur', visible
+						StaticText 'Indicateur'
+				[241] listitem '', visible
+					[242] LayoutTable '', visible
+						[243] link 'Réunions', visible
+							[244] image '', visible
+						[245] link '75', visible
+							StaticText '75'
+					[248] link 'Réunion', visible
+						StaticText 'Réunion'
+		[363] list '', visible
+			[365] listitem '', visible
+				[366] combobox '' value='Group', visible, hasPopup='menu', expanded=False
+					[367] option 'Group', selected=True
+					[368] option 'Filiale 1', selected=False
+					[369] option 'Filiale 2', selected=False
+			[370] listitem '', visible
+				[372] button '\uf107', visible
+					[373] image '', visible
+					StaticText '\uf107'
+			[380] listitem '', visible
+				[382] button '\uf107', visible
+					[383] image '', visible
+					StaticText '\uf107'
+			[389] listitem '', visible
+				[390] button 'FR \uf107', visible, hasPopup='menu', expanded=True
+					StaticText 'FR'
+					StaticText '\uf107'
+			[403] listitem '', visible
+				[404] image 'Nombre des utilisateurs connectés', visible
+				StaticText '1'
+			[407] listitem '', visible
+				[408] link '', visible
+					[409] image '', visible
+			[424] listitem '', visible
+		[427] button '', visible
+			[428] image '', visible
+		[466] link 'Formulaire'
+			[468] image ''
+			StaticText 'Formulaire'
+		[500] list '', visible
+			[501] listitem '', visible
+				[502] link 'Reporting Reporting \uf107', visible
+					[503] image 'Reporting', visible
+					StaticText '\uf107'
+			[654] listitem '', visible
+				[655] link 'Documentation Documentation \uf107', visible
+					[656] image 'Documentation', visible
+					StaticText '\uf107'
+			[699] listitem '', visible
+				[700] link 'Actions Actions \uf106', visible
+					[701] image 'Actions', visible
+					StaticText '\uf106'
+				[703] list '', visible
+					[704] listitem '', visible
+						[705] link 'Actions', visible
+					[706] listitem '', visible
+						[707] link "Demandes d'actions", visible
+					[708] listitem '', visible
+						[709] link "Modèles d'actions", visible
+					[710] listitem '', visible
+						[711] link 'Responsables de validation', visible
+					[712] listitem '', visible
+						[713] link 'Responsable de clôture', visible
+					[714] listitem '', visible
+						[715] link "Sources d'actions", visible
+					[716] listitem '', visible
+						[717] link "Types d'actions", visible
+					[718] listitem '', visible
+						[719] link 'Types de causes', visible
+					[720] listitem '', visible
+						[721] link 'Catégories de causes', visible
+					[722] listitem '', visible
+						[723] link 'Priorité', visible
+					[724] listitem '', visible
+						[725] link 'Gravité Action', visible
+					[726] listitem '', visible
+						[727] link 'Causes de modification', visible
+			[728] listitem '', visible
+				[729] link 'Audits Audits \uf107', visible
+					[730] image 'Audits', visible
+					StaticText '\uf107'
+			[749] listitem '', visible
+				[750] link 'Indicateurs Indicateurs \uf107', visible
+					[751] image 'Indicateurs', visible
+					StaticText '\uf107'
+			[762] listitem ''
+				[763] link 'Non Conformité Non Conformité \uf107'
+					[764] image 'Non Conformité'
+					StaticText '\uf107'
+			[785] listitem ''
+				[786] link 'Réunion Réunion \uf107'
+					[787] image 'Réunion'
+					StaticText '\uf107'
+			[794] listitem ''
+				[795] link 'G.R.H G.R.H \uf107'
+					[796] image 'G.R.H'
+					StaticText '\uf107'
+			[825] listitem ''
+				[826] link 'Création Rapports Création Rapports \uf107'
+					[827] image 'Création Rapports'
+					StaticText '\uf107'
+		StaticText 'Actions'
+		[864] heading "+Demande(s) d'action(s) refusée(s) 0", visible
+			StaticText '+'
+			StaticText "Demande(s) d'action(s) refusée(s)"
+			StaticText '0'
+		[876] heading '+Action(s) pour info 1342', visible
+			StaticText '+'
+			StaticText 'Action(s) pour info'
+			StaticText '1342'
+		[938] heading "+Demande(s) d'action à valider 14", visible
+			StaticText '+'
+			StaticText "Demande(s) d'action à valider"
+			StaticText '14'
+		[991] heading '+Action(s) à lancer suite à un Audit 148', visible
+			StaticText '+'
+			StaticText 'Action(s) à lancer suite à un Audit'
+			StaticText '148'
+		[1053] heading '+Action(s) à réaliser 1400', visible
+			StaticText '+'
+			StaticText 'Action(s) à réaliser'
+			StaticText '1400'
+		[1118] heading '+Action(s) à suivre 127', visible
+			StaticText '+'
+			StaticText 'Action(s) à suivre'
+			StaticText '127'
+		[1180] heading '+Demandes de modification à valider 46', visible
+			StaticText '+'
+			StaticText 'Demandes de modification à valider'
+			StaticText '46'
+		[1237] heading '+Action(s) à clôturer 314', visible
+			StaticText '+'
+			StaticText 'Action(s) à clôturer'
+			StaticText '314'
+	[1753] textbox '' value='\n'
+		StaticText ''

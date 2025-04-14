@@ -1,7 +1,6 @@
 {
-    "action_name": "InputText",
+    "action_name": "ClickAction",
     "action_params": {
-        "bid": "70",
-        "value": "Mo"
+        "bid": "1625"
     }
 }

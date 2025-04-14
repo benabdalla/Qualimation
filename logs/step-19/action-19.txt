@@ -1,5 +1,5 @@
 {
-    "bid": "65",
-    "value": "MO",
+    "bid": "2048",
+    "value": "Origine action",
     "action": "InputText"
 }

@@ -1,5 +1,5 @@
 {
     "bid": "66",
-    "value": "Mo",
+    "value": "Password0!",
     "action": "InputText"
 }

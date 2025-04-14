@@ -1,12 +1,22 @@
-TimeoutError: Locator.click: Timeout 500ms exceeded.
+TimeoutError: Locator.scroll_into_view_if_needed: Timeout 485ms exceeded.
 Call log:
-waiting for get_by_test_id("2314")
-  -   locator resolved to <a bid="2314" class="btn btn-valider" browsergym_se…>…</a>
-  - attempting click action
-  -   waiting for element to be visible, enabled and stable
-  -   element is visible, enabled and stable
-  -   scrolling into view if needed
-  -   done scrolling
-  -   performing click action
-  -   click action done
-  -   waiting for scheduled navigations to finish
+attempting scroll into view action
+  -   waiting for element to be stable
+  -   element is not visible
+  - retrying scroll into view action, attempt #1
+  -   waiting for element to be stable
+  -   element is not visible
+  - retrying scroll into view action, attempt #2
+  -   waiting 20ms
+  -   waiting for element to be stable
+  -   element is not visible
+  - retrying scroll into view action, attempt #3
+  -   waiting 100ms
+  -   waiting for element to be stable
+  -   element is not visible
+  - retrying scroll into view action, attempt #4
+  -   waiting 100ms
+  -   waiting for element to be stable
+  -   element is not visible
+  - retrying scroll into view action, attempt #5
+  -   waiting 500ms

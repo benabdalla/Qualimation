@@ -1,7 +1,6 @@
 {
-    "action_name": "InputText",
+    "action_name": "TaskComplete",
     "action_params": {
-        "bid": "70",
-        "value": "Mo"
+        "msg": "Please manually verify that the panels under action and clôture are displayed after the creation of the card is validated."
     }
 }

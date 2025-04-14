@@ -1,20 +1,100 @@
-{% extends "base.html" %}
-{% block title %}Register{% endblock %}
-{% block content %}
-<div class="d-flex justify-content-center align-items-center vh-100" style="background: url('{{ url_for('static', filename='images/back.png') }}') no-repeat center center fixed; background-size: cover;">
-    <div class="card p-4 shadow" style="width: 400px;">
-        <img src="{{ url_for('static', filename='images/sd.png') }}" alt="Logo" class="img-fluid mb-3 mx-auto d-block" style="max-width: 200px;">
-        <h2 class="text-center">Register</h2>
-        <form method="POST">
-            <div class="mb-3">
-                <input type="text" name="username" class="form-control" placeholder="Username" required>
-            </div>
-            <div class="mb-3">
-                <input type="password" name="password" class="form-control" placeholder="Password" required>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Create Account</button>
-        </form>
-        <p class="text-center mt-3">Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>QualiMation - Register</title>
+
+    <!-- Bootstrap and Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/templatemo-chain-app-dev.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animated.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/login.css') }}">
+</head>
+<body>
+<!-- Preloader -->
+<div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 </div>
-{% endblock %}
+
+<!-- Header -->
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <a href="{{ url_for('main') }}" class="logo">
+                        <img width="20%" src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="QualiMation Logo">
+                    </a>
+                    <ul class="nav">
+                        <li class="scroll-to-section"><a href="{{ url_for('main') }}">Home</a></li>
+                        <li><div class="gradient-button"><a href="{{ url_for('login') }}">Login</a></div></li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div id="register" class="services section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="section-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <h4>Create Your <em>QualiMation</em> Account</h4>
+                    <img src="{{ url_for('static', filename='assets/images/heading-line-dec.png') }}" alt="">
+                    <p>Join QualiMation to automate your testing with AI-powered bots.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+                <div class="card p-4 shadow wow fadeInUp cadeStyle" data-wow-duration="1s" data-wow-delay="0.3s" style="width: 800px; height:500px; background: rgba(255, 255, 255, 0.9);">
+                    <h2 class="text-center">Register</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <form method="POST">
+                        <div class="mb-3">
+                            <input type="text" name="username" class="form-control" placeholder="Username" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" name="password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn apple w-100">Create Account</button>
+                    </form>
+                    <p class="text-center mt-3">Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/owl-carousel.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/animation.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/imagesloaded.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/popup.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+</body>
+</html>

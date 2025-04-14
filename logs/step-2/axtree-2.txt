@@ -5,9 +5,9 @@ RootWebArea '.:QualiProWeb:.', focused
 		[61] textbox 'Login' value='MO', visible, required
 			StaticText 'MO'
 		StaticText '\uf13e'
-		[66] textbox 'Mot de passe' value='••', visible, focused, required
-			StaticText '••'
+		[66] textbox 'Mot de passe' value='â€¢â€¢', visible, focused, required
+			StaticText 'â€¢â€¢'
 		[68] LabelText '', visible
 		[69] link 'CONNEXION', visible
-		[72] link "Changer mes paramètres d'accès", visible
-		StaticText '© 2004-2025 QUALIPRO BY IMAGINE HUMAIN TOUS DROITS RÉSERVÉS'
+		[72] link "Changer mes paramÃ¨tres d'accÃ¨s", visible
+		StaticText 'Â© 2004-2025 QUALIPRO BY IMAGINE HUMAIN TOUS DROITS RÃ‰SERVÃ‰S'

@@ -1,5 +1,4 @@
 {
-    "bid": "70",
-    "value": "Mo",
-    "action": "InputText"
+    "msg": "Please manually verify that the panels under action and cl\u00f4ture are displayed after the creation of the card is validated.",
+    "action": "TaskComplete"
 }
