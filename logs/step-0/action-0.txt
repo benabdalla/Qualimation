@@ -1,5 +1,0 @@
-{
-    "bid": "61",
-    "value": "testautotest",
-    "action": "InputText"
-}

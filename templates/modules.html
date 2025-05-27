@@ -1,16 +1,87 @@
-{% extends "base.html" %}
-{% block title %}Modules{% endblock %}
-{% block content %}
-<div class="container py-5" style="background: rgba(255, 255, 255, 0.7); border-radius: 20px;">
-    <h1 class="text-center mb-4">Modules</h1>
-    <div class="row">
-        <div class="col-md-6">
-            <h3>Twitter</h3>
-            <a href="{{ url_for('twitter_module', action='create') }}" class="btn btn-primary">Create Account</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+          rel="stylesheet">
+    <title>QualiMation -</title>
+    <!-- Bootstrap and Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/templatemo-chain-app-dev.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animated.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/login.css') }}">
+</head>
+<body>
+<!-- Preloader -->
+<div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
-    <div class="text-center mt-4">
-        <a href="{{ url_for('main') }}" class="btn btn-warning">Back</a>
-    </div>
 </div>
-{% endblock %}
+<!-- Header -->
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <a href="{{ url_for('main.main') }}" class="logo">
+                        <img width="20%" src="{{ url_for('static', filename='assets/images/logo.png') }}"
+                             alt="QualiMation Logo">
+                    </a>
+                    <ul class="nav">
+                        <li class="scroll-to-section"><a href="{{ url_for('main.main') }}" class="active">Home</a></li>
+                        <li>
+                            <div class="gradient-button"><a href="{{ url_for('auth.logout') }}">LogOut</a></div>
+                        </li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="qualimation" class="services section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="section-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="container py-5">
+                        <h1 class="text-center mb-4">Modules</h1>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="{{ url_for('recl.all_test_rec') }}" class="btn apple w-60 mb-3">Réclamation
+                                    Client</a>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <a href="{{ url_for('main.main') }}" class="btn apple w-50 mb-3">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/owl-carousel.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/animation.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/imagesloaded.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/popup.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+</body>
+</html>

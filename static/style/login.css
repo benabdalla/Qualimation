@@ -209,3 +209,16 @@
    width:25%;
    height:70%
     }
+
+    .btnCas {
+        display: flex
+    ;
+        align-items: center;
+        padding: 10px 50px;
+        font-size: 10px;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width:160px;
+    }

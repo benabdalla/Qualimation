@@ -92,7 +92,7 @@
         <div class="col-md-4 login-sec d-flex flex-column justify-content-center align-items-center">
         <div class="login-forms">
           <h2 class="text-center">Login Now</h2>
-          <form method="POST"  action="{{ url_for('login') }}" class="login-form w-100">
+          <form method="POST"  action="{{ url_for('auth.login') }}" class="login-form w-100">
             <div class="form-group">
               <label for="exampleInputEmail1" class="text-uppercase">Username</label>
               <input  type="text" name="username" class="form-control" placeholder="">
@@ -112,13 +112,10 @@
               </button>
             </div>
           </form>
-          <div class="copy-text mt-4">Don't have an account? <i class="fa fa-heart"></i>  <a href="{{ url_for('register') }}">Register</a></div>
-
+          <div class="copy-text mt-4">Don't have an account? <i class="fa fa-heart"></i>  <a href="{{ url_for('auth.register') }}">Register</a></div>
           <p class="text-center mt-3">
-
         </div>
         </div>
-
         <!-- BACKGROUND / CAROUSEL -->
         <div class="col-md-8 banner-sec">
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

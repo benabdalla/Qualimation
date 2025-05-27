@@ -1,7 +1,0 @@
-{
-    "action_name": "InputText",
-    "action_params": {
-        "bid": "61",
-        "value": "testautotest"
-    }
-}

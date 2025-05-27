@@ -66,16 +66,16 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="{{ url_for('main') }}" class="logo">
+                    <a href="{{ url_for('main.main') }}" class="logo">
                         <img width="20%" src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="QualiMation Logo">
                     </a>
 
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li class="scroll-to-section"><a href="{{ url_for('main') }}" class="active">Home</a></li>
+                        <li class="scroll-to-section"><a href="{{ url_for('main.main') }}" class="active">Home</a></li>
                       <li>  <div class="gradient-button">
-                          <a id="modal_trigger" href="{{ url_for('logout') }}">LogOut</a></div></li>
+                          <a id="modal_trigger" href="{{ url_for('auth.logout') }}">LogOut</a></div></li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -102,7 +102,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-                <div class="service-item first-service" onclick="window.location.href='{{ url_for('gherkin') }}'"  style="cursor: pointer;">
+                <div class="service-item first-service" onclick="window.location.href='{{ url_for('gherkin.gherkin') }}'"  style="cursor: pointer;">
                     <div class="icon"></div>
                     <h4>Bot Gherkin</h4>
                     <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
@@ -113,7 +113,7 @@
             </div>
             <div class="col-lg-3">
 
-                <div class="service-item second-service"   onclick="window.location.href='{{ url_for('manule') }}'"  style="cursor: pointer;">
+                <div class="service-item second-service"   onclick="window.location.href='{{ url_for('main.manule') }}'"  style="cursor: pointer;">
                     <div class="icon"></div>
                     <h4>Bot manual</h4>
                     <p>You are allowed to use the Chain App Dev HTML template. Feel free to modify or edit this layout.</p>

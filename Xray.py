@@ -4,16 +4,16 @@ from requests.auth import HTTPBasicAuth
 from requests.models import Response
 import os
 import requests
-
 # Constants
 AUTH_URL = "https://xray.cloud.getxray.app/api/v2/authenticate"
 CLIENT_ID = "1CFA19C10AFD4DDDB7F85EE6E56035A3"
 CLIENT_SECRET = "4d6317a9dab393ae67f7947b273e6e1820315efc25a42d51ddb4f47a869ab2b7"
 IMPORT_URL = "https://xray.cloud.getxray.app/api/v2/import/execution/"
+IMPORT_Cucumber_URL = "https://xray.cloud.getxray.app/api/v2/import/execution/cucumber"
+
+
 BASE_URL = "https://xray.cloud.getxray.app/"
 PROJECTXRAYID = "CDT"
-
-
 # 1️⃣ Authenticate and Get JWT Token
 def get_auth_token() -> str:
     auth_payload = {
@@ -50,6 +50,35 @@ def get_auth_token() -> str:
         return None
 
 
+
+
+def import_test_results_json(token: str, json_data: dict) -> None:
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"
+    }
+
+    json_payload = json.dumps(json_data)  # Convertir dict en chaîne JSON
+
+    print("📂 JSON Data Being Sent:", json_payload)
+    response = requests.post(IMPORT_URL, headers=headers, data=json_payload)
+
+    print(f"🔴 Response Code: {response.status_code}")
+    print(f"🔴 Response Body: {response.text}")
+def import_test_results_json_cucumber(token: str, json_data: dict) -> None:
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"
+    }
+
+    json_payload = json.dumps(json_data)  # Convertir dict en chaîne JSON
+
+    print("📂 JSON Data Being Sent:", json_payload)
+    response = requests.post(IMPORT_Cucumber_URL, headers=headers, data=json_payload)
+
+    print(f"🔴 Response Code: {response.status_code}")
+    print(f"🔴 Response Body: {response.text}")
+
 def import_test_results(token: str, path: str) -> None:
     headers = {
         "Authorization": f"Bearer {token}",
@@ -67,6 +96,19 @@ def import_test_results(token: str, path: str) -> None:
 
 # Example usage
 if __name__ == "__main__":
+    xray_result = {
+        "testExecutionKey": "CDT-6272",
+        "tests": [
+            {
+                "testKey": "CDT-3669",
+                "start": "2025-04-24T12:46:43.687768+00:00",
+                "finish":"2025-04-24T12:46:43.687768+00:00",
+                "comment": "Résultats des tests automatisés via agent IA.",
+                "status": "Passed"
+            }
+        ]
+    }
     token = get_auth_token()
-    import_test_results(token, "reports/xray_report.json")
+    import_test_results_json(token,xray_result)
+    token = get_auth_token()
     # import_feature_file_to_xray(token, "path/to/your/feature_file.feature")

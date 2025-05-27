@@ -1,0 +1,11 @@
+{
+  "max_steps": 300000,
+  "headless": false,
+  "use_vision": true,
+  "llm_provider": "google",
+  "llm_model": "gemini-2.0-flash",
+  "save_agent_history_path": "./tmp/agent_history",
+  "save_download_path": "./tmp/downloads",
+  "window_width": 1280,
+  "window_height": 1100
+}

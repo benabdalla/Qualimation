@@ -1733,12 +1733,7 @@ PopUp
   background: #FFF;
 }
 
-.btn {
-  padding: 10px 20px;
-  background: #4b8ef1;
-  color: #fff;
-  transition: all .3s;
-}
+
 
 .btnTask {
   padding: 10px 20px;

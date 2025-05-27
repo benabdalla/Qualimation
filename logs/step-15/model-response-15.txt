@@ -1,6 +1,0 @@
-{
-    "action_name": "TaskComplete",
-    "action_params": {
-        "msg": "Please manually verify that the panels under action and clôture are displayed after the creation of the card is validated."
-    }
-}

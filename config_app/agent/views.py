@@ -28,12 +28,12 @@ class AgentSettings(BaseModel):
 	"""Options for the agent"""
 
 	use_vision: bool = True
-	use_vision_for_planner: bool = False
+	use_vision_for_planner: bool = True
 	save_conversation_path: Optional[str] = None
 	save_conversation_path_encoding: Optional[str] = 'utf-8'
-	max_failures: int = 3
+	max_failures: int = 10
 	retry_delay: int = 10
-	max_input_tokens: int = 128000
+	max_input_tokens: int = 1280000
 	validate_output: bool = False
 	message_context: Optional[str] = None
 	generate_gif: bool | str = False

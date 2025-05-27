@@ -101,8 +101,8 @@
                                 {% if prefilled_task %}
                                 {% endif %}
                                 <button type="submit" name="stop" class="btn btn-danger w-100 mb-3" id="stopButton" {% if not task_running %}disabled{% endif %}>Stop Task</button>
-                                <a href="{{ url_for('modules') }}" class="btn apple w-100 mb-3">Modules</a>
-                                <a href="{{ url_for('results') }}" class="btn apple w-100">Show Results</a>
+                                <a href="{{ url_for('main.modules') }}" class="btn apple w-100 mb-3">Modules</a>
+                                <a href="{{ url_for('results.results') }}" class="btn apple w-100">Show Results</a>
                             </div>
                         </div>
                     </form>
