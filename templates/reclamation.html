@@ -79,7 +79,7 @@
                             <div class="col-md-6">
                                 <div class="d-flex flex-column">
                                     {% set task_statuses = task_statuses or {} %}
-                                    {% for case_id in ['CDT-3685', 'CDT-3689', 'CDT-3690','CDT-3691','CDT-3692','CDT-3695'] %}
+                                    {% for case_id in ['CDT-3685', 'CDT-3689', 'CDT-3690','CDT-3691','CDT-3692','CDT-3695','CDT-3696'] %}
                                     {% set status = task_statuses.get(case_id, '') %}
                                     {% set css_class = 'btn-success' if status == 'PASSED' else 'btn-danger' if status == 'FAILED' else 'btn-secondary' %}
                                     <a href="{{ url_for('recl.test_case', case_id=case_id) }}"

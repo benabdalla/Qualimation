@@ -3,13 +3,11 @@ import importlib.resources
 from datetime import datetime
 from typing import TYPE_CHECKING, List, Optional
 
-from langchain_core.messages import HumanMessage, SystemMessage
 
+from langchain_core.messages import HumanMessage, SystemMessage
 if TYPE_CHECKING:
 	from config_app.agent.views import ActionResult, AgentStepInfo
 	from config_app.browser.views import BrowserState
-
-
 class SystemPrompt:
 	def __init__(
 			self,
@@ -35,7 +33,7 @@ class SystemPrompt:
 	def _load_prompt_template(self) -> None:
 		"""Load the prompt template from the markdown file."""
 		try:
-			with importlib.resources.files('config_app.agent').joinpath('system_prompt.md').open('r') as f:
+			with importlib.resources.files('config_app.agent').joinpath('system_prompt.md').open('r', encoding='utf-8') as f:
 				self.prompt_template = f.read()
 		except Exception as e:
 			raise RuntimeError(f'Failed to load system prompt template: {e}')
@@ -48,8 +46,6 @@ class SystemPrompt:
             SystemMessage: Formatted system prompt
         """
 		return self.system_message
-
-
 class AgentMessagePrompt:
 	def __init__(
 			self,
@@ -124,8 +120,6 @@ Interactive elements from top layer of the current page inside the viewport:
 			)
 
 		return HumanMessage(content=state_description)
-
-
 class PlannerPrompt(SystemPrompt):
 	def get_system_message(self) -> SystemMessage:
 		return SystemMessage(

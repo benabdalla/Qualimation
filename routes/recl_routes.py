@@ -24,6 +24,11 @@ def test_case(case_id):
         'CDT-3688': test_case_instance.CDT_3688,
         'CDT-3685': test_case_instance.CDT_3685,
         'CDT-3689': test_case_instance.CDT_3689,
+        'CDT-3690': test_case_instance.CDT_3690,
+        'CDT-3691': test_case_instance.CDT_3691,
+        'CDT-3692': test_case_instance.CDT_3692,
+        'CDT-3695': test_case_instance.CDT_3695,
+        'CDT-3696': test_case_instance.CDT_3696,
     }
     test_case = test_case_mapping.get(case_id)
     if not test_case:

@@ -845,5 +845,107 @@
         "status": "FAILED",
         "final_result": "No result",
         "timestamp": "2025-05-27T10:19:48.224798+00:00"
+    },
+    {
+        "task": "CDT-3689",
+        "status": "PASSED",
+        "final_result": "I have successfully completed all the steps of the task. The reclamation form has been submitted successfully. The messages 'Fiche R\u00e9clamation client N\u00b0 [0-9]+' and 'Liste des produits','Liste des types de causes','Liste des non conformit\u00e9s','Liste des demandes parties int\u00e9ress\u00e9es' are displayed.",
+        "timestamp": "2025-05-27T10:29:16.568596+00:00"
+    },
+    {
+        "task": "CDT-3690",
+        "status": "FAILED",
+        "final_result": "\ud83d\udcc4  Extracted from page\n: ```json\n{\n  \"extracted_information\": {\n    \"message_visible\": \"Fiche R\u00e9clamation client N\u00b0 Enregistr\u00e9e par Mootez F1 ( )\"\n  }\n}\n```\n\nNo result",
+        "timestamp": "2025-05-27T10:44:54.013892+00:00"
+    },
+    {
+        "task": "CDT-3690",
+        "status": "PASSED",
+        "final_result": "I have successfully completed all the steps of the task. I opened the URL, filled the form, submitted it, and checked if the messages were visible and attachment was completed successfully.",
+        "timestamp": "2025-05-27T10:49:17.199489+00:00"
+    },
+    {
+        "task": "CDT-3669",
+        "status": "FAILED",
+        "final_result": "\ud83d\udcc4  Extracted from page\n: ```json\n{\n  \"matches\": [\n    {\n      \"text\": \"Fiche R\u00e9clamation client N\u00b0\",\n      \"element\": \"Enregistrement\"\n    }\n  ]\n}\n```\n\nI have completed most of the steps, but I couldn't select the dropdown options.  I was able to open the URL, fill the login form, navigate to the reclamation form, fill some of the fields, and select a recipient and client. However, I encountered errors when trying to select options from the dropdown menus.  The specific errors were:  Error selecting dropdown option index 135, and Error selecting dropdown option index 136.  More information can be found in the task history memory.",
+        "timestamp": "2025-05-27T13:01:21.960268+00:00"
+    },
+    {
+        "task": "CDT-3669",
+        "status": "FAILED",
+        "final_result": "No result",
+        "timestamp": "2025-05-27T13:47:14.886844+00:00"
+    },
+    {
+        "task": "CDT-3669",
+        "status": "FAILED",
+        "final_result": "No result",
+        "timestamp": "2025-05-27T13:47:33.683853+00:00"
+    },
+    {
+        "task": "CDT-3669",
+        "status": "FAILED",
+        "final_result": "No result",
+        "timestamp": "2025-05-27T13:51:02.931299+00:00"
+    },
+    {
+        "task": "CDT-3691",
+        "status": "FAILED",
+        "final_result": "\ud83d\udcc4  Extracted from page\n: ```json\n{\n  \"matches_found\": true,\n  \"matches\": [\n    \"Fiche R\u00e9clamation client N\u00b0\"\n  ]\n}\n```\n\nI have completed most of the steps, but I encountered some errors during the process.  Specifically, I was unable to click on the 'Valider' button (index 157) because it didn't exist.  I also had trouble selecting options from certain dropdown menus as some elements were unexpectedly input fields instead of selects.  The task was not fully completed due to these issues.  However, I successfully navigated to the necessary pages, filled in most of the form fields, and verified the presence of the expected message.  The detailed steps and results are in the memory.",
+        "timestamp": "2025-05-27T14:36:58.188365+00:00"
+    },
+    {
+        "task": "CDT-3691",
+        "status": "FAILED",
+        "final_result": "No result",
+        "timestamp": "2025-05-27T15:04:04.540319+00:00"
+    },
+    {
+        "task": "CDT-3691",
+        "status": "PASSED",
+        "final_result": "\ud83d\udcc4  Extracted from page\n: ```json\n{\n  \"message_visible\": true,\n  \"message_details\": {\n    \"message\": \"Fiche R\u00e9clamation client N\u00b0\",\n    \"user\": \"Mootez F1\"\n  }\n}\n```\n\nThe ultimate task has been completed successfully. All steps were executed as planned. The reclamation form was submitted, and the attachment was completed successfully.",
+        "timestamp": "2025-05-27T15:08:50.684960+00:00"
+    },
+    {
+        "task": "CDT-3692",
+        "status": "PASSED",
+        "final_result": "I have successfully completed all steps of the task. All the fields in the form have been filled and the reclamation has been submitted successfully.",
+        "timestamp": "2025-05-27T15:23:13.444125+00:00"
+    },
+    {
+        "task": "CDT-3692",
+        "status": "PASSED",
+        "final_result": "I have successfully completed all the steps of the task. The reclamation form was submitted successfully.",
+        "timestamp": "2025-05-27T15:33:58.593395+00:00"
+    },
+    {
+        "task": "CDT-3692",
+        "status": "FAILED",
+        "final_result": "I have completed most of the steps, but I encountered some errors along the way.  Specifically, I couldn't click the 'Valider' button because the element with index 157 was not found.  I was also unable to select options from certain dropdown menus because some elements were inputs instead of selects.  The task is not fully completed.  Details of what was done is included in the memory.",
+        "timestamp": "2025-05-27T15:45:37.327700+00:00"
+    },
+    {
+        "task": "CDT-3692",
+        "status": "PASSED",
+        "final_result": "The ultimate task has been completed successfully. All steps were executed as planned. The reclamation form was filled and submitted. The confirmation message was verified.",
+        "timestamp": "2025-05-27T15:48:11.063533+00:00"
+    },
+    {
+        "task": "CDT-3669",
+        "status": "FAILED",
+        "final_result": "\ud83d\udcc4  Extracted from page\n: ```json\n{\n  \"extracted_content\": {\n    \"message\": \"Fiche R\u00e9clamation client N\u00b0 Enregistr\u00e9e par Mootez F1 (  ), Page: SESSION.::.Mootez F1 .::.VERSION.:W25.4\"\n  }\n}\n```\n\nNo result",
+        "timestamp": "2025-05-27T16:46:14.189459+00:00"
+    },
+    {
+        "task": "CDT-3695",
+        "status": "FAILED",
+        "final_result": "No result",
+        "timestamp": "2025-05-28T06:58:02.066493+00:00"
+    },
+    {
+        "task": "CDT-3695",
+        "status": "PASSED",
+        "final_result": "The ultimate task is completed successfully. All steps are completed as requested.",
+        "timestamp": "2025-05-28T07:02:43.403333+00:00"
     }
 ]

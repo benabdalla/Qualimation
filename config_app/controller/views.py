@@ -10,6 +10,7 @@ class SearchGoogleAction(BaseModel):
 
 class GoToUrlAction(BaseModel):
 	url: str
+	url: str
 
 
 class ClickElementAction(BaseModel):

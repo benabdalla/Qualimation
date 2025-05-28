@@ -29,4 +29,4 @@ def home():
     return render_template('welcome.html')
 
 if __name__ == '__main__':
-    app.run(debug=false)
+    app.run(debug=false,host='0.0.0.0',port=5001)

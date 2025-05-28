@@ -1,31 +1,11 @@
 import os
-import json
-import asyncio
 import logging
-from datetime import datetime
-from zoneinfo import ZoneInfo
-from flask import Flask, render_template, request, redirect, url_for, flash, send_file, jsonify, session
-from sympy import false, true
-from werkzeug.security import generate_password_hash, check_password_hash
+from flask import Flask
 from dotenv import load_dotenv
-from Xray import get_auth_token, import_test_results, import_test_results_json, import_test_results_json_cucumber
-from config_app.agent.service import Agent
-from config_app.browser.browser import Browser, BrowserConfig
-from config_app.browser.context import BrowserContextConfig, BrowserContextWindowSize
-from langchain_google_genai import ChatGoogleGenerativeAI
-from pydantic import SecretStr
-from threading import Thread
-import uuid
-from testCases.Client import TestCaseReclmationClient
-
-
-# Load environment variables
 load_dotenv()
-
-
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY", "your-secret-key")  # Set a secure secret key in .env
-# Constants
+
 USERS_DB = "users.json"
 RESULTS_DB = "results_database.json"
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") or "YOUR_GEMINI_API_KEY"
@@ -33,10 +13,9 @@ DEFAULT_CONFIG = {
     "headless": True, "disable_security": False, "window_w": 1280, "window_h": 720,
     "max_steps": 100, "save_recording_path": "./recordings", "save_trace_path": "./traces"
 }
-# Logging setup
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-# Task management
 running_tasks = {}  # Dictionary to track running tasks: {task_id: status}
 # Load/save results
 
