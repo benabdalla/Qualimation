@@ -53,6 +53,7 @@ class ManagedMessage(BaseModel):
 		Custom validator that uses langchain's `loads` function
 		to parse the message if it is provided as a JSON string.
 		"""
+
 		if isinstance(value, dict) and 'message' in value:
 			# NOTE: We use langchain's load to convert the JSON string back into a BaseMessage object.
 			value['message'] = load(value['message'])

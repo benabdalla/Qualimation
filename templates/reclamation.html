@@ -64,7 +64,7 @@
 
 
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 {% set task_statuses = task_statuses or {} %}
                                 {% for case_id in ['CDT-3669', 'CDT-3668', 'CDT-3681','CDT-3683','CDT-3684','CDT-3686','CDT-3687','CDT-3688'] %}
                                 {% set status = task_statuses.get(case_id, '') %}
@@ -76,10 +76,10 @@
                                 </a>
                                 {% endfor %}
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="d-flex flex-column">
                                     {% set task_statuses = task_statuses or {} %}
-                                    {% for case_id in ['CDT-3685', 'CDT-3689', 'CDT-3690','CDT-3691','CDT-3692','CDT-3695','CDT-3696'] %}
+                                    {% for case_id in ['CDT-3685', 'CDT-3689', 'CDT-3690','CDT-3691','CDT-3692','CDT-3695','CDT-3696','CDT-3708','CDT-3704','CDT-3705'] %}
                                     {% set status = task_statuses.get(case_id, '') %}
                                     {% set css_class = 'btn-success' if status == 'PASSED' else 'btn-danger' if status == 'FAILED' else 'btn-secondary' %}
                                     <a href="{{ url_for('recl.test_case', case_id=case_id) }}"
@@ -90,12 +90,20 @@
                                     {% endfor %}
                                 </div>
                             </div>
-
-<!--                            <div class="col-md-6">-->
-<!--                                <a href="{{ url_for('recl.test_case', case_id='CDT-3669') }}" class="CDT btn apple w-60 mb-3"> Lancer CDT_3669 </a>-->
-<!--                                <a href="{{ url_for('recl.test_case', case_id='CDT-3668') }}" class="CDT btn apple w-60 mb-3"> Lancer CDT_3668 </a>-->
-<!--                                <a href="{{ url_for('recl.test_case', case_id='CDT-3681') }}" class="CDT btn apple w-60 mb-3"> Lancer CDT_3681 </a>-->
-<!--                            </div>-->
+                            <div class="col-md-4">
+                                <div class="d-flex flex-column">
+                                    {% set task_statuses = task_statuses or {} %}
+                                    {% for case_id in ['CDT-3708','CDT-3693','CDT-3694','CDT-3701','CDT-3702','CDT-3703','CDT-3697','CDT-3698','CDT-3699','CDT-3700'] %}
+                                    {% set status = task_statuses.get(case_id, '') %}
+                                    {% set css_class = 'btn-success' if status == 'PASSED' else 'btn-danger' if status == 'FAILED' else 'btn-secondary' %}
+                                    <a href="{{ url_for('recl.test_case', case_id=case_id) }}"
+                                       class="btn {{ css_class }} mb-3"
+                                       aria-label="Lancer le test {{ case_id }}">
+                                        Lancer {{ case_id }}
+                                    </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
                         </div>
                         <div class="text-center mt-4">
                             <a  href="{{ url_for('main.modules') }}" class="btn apple w-50 mb-3">Back</a>

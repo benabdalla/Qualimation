@@ -1,7 +1,10 @@
 import os
 import logging
+from getpass import getpass
+
 from flask import Flask
 from dotenv import load_dotenv
+
 load_dotenv()
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY", "your-secret-key")  # Set a secure secret key in .env

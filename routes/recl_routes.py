@@ -29,6 +29,18 @@ def test_case(case_id):
         'CDT-3692': test_case_instance.CDT_3692,
         'CDT-3695': test_case_instance.CDT_3695,
         'CDT-3696': test_case_instance.CDT_3696,
+        'CDT-3708': test_case_instance.CDT_3708,
+        'CDT-3693': test_case_instance.CDT_3693,
+        'CDT-3694': test_case_instance.CDT_3694,
+        'CDT-3701': test_case_instance.CDT_3701,
+        'CDT-3702': test_case_instance.CDT_3702,
+        'CDT-3703': test_case_instance.CDT_3703,
+        'CDT-3697': test_case_instance.CDT_3697,
+        'CDT-3698': test_case_instance.CDT_3698,
+        'CDT-3699': test_case_instance.CDT_3699,
+        'CDT-3700': test_case_instance.CDT_3700,
+        'CDT-3704': test_case_instance.CDT_3704,
+        'CDT-3705': test_case_instance.CDT_3705
     }
     test_case = test_case_mapping.get(case_id)
     if not test_case:

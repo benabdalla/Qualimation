@@ -4,6 +4,7 @@ from sympy import false
 from routes.auth_routes import auth_bp
 from routes.main_routes import main_bp
 from routes.gherkin_routes import gherkin_bp
+from routes.manule_routes import manule_bp
 from routes.recl_routes import recl_bp
 from routes.results_routes import results_bp
 import os
@@ -20,6 +21,7 @@ app.register_blueprint(main_bp, url_prefix='/main')
 app.register_blueprint(gherkin_bp, url_prefix='/gherkin')
 app.register_blueprint(results_bp, url_prefix='/results')
 app.register_blueprint(recl_bp, url_prefix='/recl')
+app.register_blueprint(manule_bp)
 
 
 

@@ -1,3 +1,4 @@
+import getpass
 import os
 import json
 import asyncio
@@ -8,6 +9,8 @@ from flask import Flask, render_template, request, redirect, url_for, flash, sen
 from sympy import false, true
 from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
+
+from App import GEMINI_API_KEY
 from Xray import get_auth_token, import_test_results, import_test_results_json, import_test_results_json_cucumber
 from config_app.agent.service import Agent
 from config_app.browser.browser import Browser, BrowserConfig
@@ -28,7 +31,8 @@ app.secret_key = os.getenv("SECRET_KEY", "your-secret-key")  # Set a secure secr
 # Constants
 USERS_DB = "users.json"
 RESULTS_DB = "results_database.json"
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") or "YOUR_GEMINI_API_KEY"
+
+
 DEFAULT_CONFIG = {
     "headless": True, "disable_security": False, "window_w": 1280, "window_h": 720,
     "max_steps": 100, "save_recording_path": "./recordings", "save_trace_path": "./traces"
@@ -98,7 +102,6 @@ def run_task(task_id, task, url, add_infos, max_steps, headless, use_vision, tes
         return result['status'];
         # session.pop('current_task_id', None)
         # session.pop('prefilled_task', None)  # Clear prefilled task after execution
-
 async def execute_task(task, url, add_infos, max_steps, headless, use_vision, test_key, task_id):
     errors = []
     final_result = "No result"
@@ -217,8 +220,6 @@ async def execute_task(task, url, add_infos, max_steps, headless, use_vision, te
             await browser_context.close()
         if 'browser' in locals():
             await browser.close()
-
-
 def get_latest_status_by_task():
     with open('results_database.json', encoding='utf-8') as f:
         data = json.load(f)
